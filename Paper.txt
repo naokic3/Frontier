@@ -1,0 +1,29 @@
+Abstract
+  I am proposing a theory to model patterns of human settlement and migration. A key feature is I am studying human spread over complex landscapes modeled as networks. An advantageof this is humans communicate and plan, taking advantage of network structures.
+
+
+
+
+3. Data and Methods
+3.1 Study Area
+  The study was conducted across 3108 counties and county equivalents of the United States. This area includes a diverse set of interconnected nodes, providing an ideal geography to model complex diffusion patterns.
+  The analysis excludes Alaska, Hawaii, Puerto Rico, U.S. Virgin Islands, Guam, American Samoa, Northern Mariana Islands and other territories due to their geographic distance and, which is out of the scope of this model
+3.2 Geospatial Data
+  County boundaries are defined by the U.S. Census Bureau's 2010 TIGER/Line Shapefiles, as the historical population data used has been calculated using these boundaries.
+  Each county is identified by its Federal Information Processing Standard (FIPS) code. This dataset provides geometric information to define county boundaries and spatial relationships.
+3.3 
+
+
+
+3.4 Graph Structure
+  We modeled the 3,108 counties of the contiguous U.S. as a directed, weighted graph G=(V,E). The vertices V represent the counties, and an edge (i,j)∈E exists if the corresponding counties share a border.
+  The graph is sparse, with 18474 edges and a density of ρ≈0.0019. The graph has an average total degree of 11.89 and a 
+
+  Nodes(Vertices):
+      - 
+
+  Edges(Links):
+
+  
+
+  
