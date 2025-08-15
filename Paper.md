@@ -33,6 +33,10 @@ DATASET Li, X., Tian, H., Pan, S., & Lu, C. (2022). Land use and land cover chan
       Caloric Suitability of land: This measure estimates "the potential (rather than actual) ... caloric yield per hectare per year, under low level of inputs and rain-fed agriculture, capturing           cultivation methods that characterized early stages of development, while removing potential concerns that caloric yields.. Moreover, the estimates are based on agro-climatic constraints             that are largely orthogonal to human intervention, mitigating further possible endogeneity." 
         > Galor, Oded, and Ömer Özak. 2016. “The Agricultural Origins of Time Preference.” American Economic Review 106 (10): 3064–103. https://doi.org/10.1257/aer.20150020.
 
+ELEVATION DATA
+
+Raster data from USGS 3DEP 1 arc-second (approx. 30m precision). Data is converted from float32 to int16 for compression. 
+
   
 
   
