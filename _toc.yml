@@ -1,0 +1,10 @@
+# _toc.yml
+format: jb-book
+root: readme # Sets the landing page
+parts:
+  - caption: Maps and Networks
+    chapters:
+      - file: Population_expansion.ipynb
+  - caption: Data Preparation
+    chapters:
+      - file: Caloric_data.ipynb
