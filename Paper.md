@@ -37,6 +37,44 @@ ELEVATION DATA
 
 Raster data from USGS 3DEP 1 arc-second (approx. 30m precision). Data is converted from float32 to int16 for compression. 
 
+
+
+
+
+
+
+
+Model Structure (PIGNN)
+
+Dependent Variable: I Used Population growth rate over the decade, which can be expressed as . If fitted regression on county population based on previous population, results in a spurious regression problem due to shared trends. By transforming raw population data into rate of change, the dependent variable becomes a stationary time series, allowing my model to meaningfully test my hypothesis. 
+
+
+Edge Features: Population ratio 
+
+
+
+Unbalanced panel problem: Our dataset exhibits an endogenous entry problem, where a countries entry as a populated state is dependent on the frontier's expansion, and not random. As a result, a naive approach which treats the data as a balanced panel would yield biased coefficients and poor model performance. 
+
+To solve this, we employ a two-stage model: 
+- Selection Model: A binary classifier (GNN) which models the entry of counties as populated states,
+  predicting when  each county becomes a possible location for settlement within the next timestep.
+- Population Model: A model that estimates 
+
+
+Counties far away from the frontier don't have population growth until they are reached. One needs to explain how and when counties "become inhabited " and start behaving according to the model. If one does not deal with this endogenous entry problem, for instance if we treated the dataset as a balanced panel with all counties in the dataset for all years, but unreached counties having zero population for many years, the model training will result in biased coefficients and reduced fit and performance.  We deal with this by modeling the entry of counties into the dataset by binary classifier. This model is best explained using an analogy of a cup that holds water. The Cup, the space that the water can take over, is the classifier which decides whether or not the county is able to be inhabited. It defines the "cup" or area which people can diffuse to at any given moment. The fluid is the main model which dictates the diffusion and flow of people, the "water" that fills this dynamic cup.
+
+
+
+GNN within a Spatial Regression, to find adjacency matrix weights
+Geographical Graph Attention Networks: Spatial Deep Learning Models for Spatial Prediction and Exploratory Spatial Data Analysis
+
+County entry classifier
+
+
+
+
+
+
   
 
   
